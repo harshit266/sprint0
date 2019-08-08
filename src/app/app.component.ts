@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
-
+import {AppService} from './app.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  title = 'sprint0';
+  constructor(private AppService:AppService) { }
+  ngOnInit() {
+
+  }
+  addData(form) {
+    this.AppService.addData(form.value);
+  }
 }
