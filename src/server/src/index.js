@@ -3,6 +3,7 @@ const routes = require('./api/v1')
 const http =require('http')
 const bodyParser = require('body-parser')
 // const initializedb = require('./db/index.ts')
+const db=require('../models');
 const cors = require("cors");
 let app = express()
 // app.server = http.createServer(app)
@@ -21,6 +22,7 @@ app.use(cors());
     
     routes(app);
     app.listen(4000 ,()=>{
+        db.sequelize.sync();
         console.log("server running on port "+ 4000)
     })
 // })
