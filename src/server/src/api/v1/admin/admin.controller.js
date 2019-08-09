@@ -1,6 +1,6 @@
 let adminController = {}
 
-const user = require('../../../../models/user.model');
+const user = require('../../../../models/user');
 
 adminController.addData = (req, res) => {
         user.create({
