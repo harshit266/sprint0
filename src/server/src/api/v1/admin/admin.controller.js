@@ -1,10 +1,9 @@
 let adminController = {}
 var db=require('../../../../models')
 // const user = require('../../../../models/user');
-var user=db.user;
+var user=db.User;
 
 adminController.addData = (req, res) => {
-    console.log("------------",req.body.name)
         user.create({
             first_name : req.body.name,
             email : req.body.email,

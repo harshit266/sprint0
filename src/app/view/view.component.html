@@ -1,0 +1,26 @@
+<table id="datatable" class="table table-bordered">
+    <thead>
+    <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Disignation</th>
+    <th>SignUp Provider</th>
+    <th>Module Name</th>
+    <th>Permission Name</th>
+
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of user">
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{user.designation}}</td>
+            <td>{{user.signup}}</td>
+            <td>{{user.moduleName}}</td>
+            <td>{{user.permissionName}}</td>
+
+        
+            
+        </tr>
+    </tbody>
+    </table>

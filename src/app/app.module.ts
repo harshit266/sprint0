@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http'; 
-
+import { HttpClientModule } from '@angular/common/http';
+import { ViewComponent } from './view/view.component'; 
+import {ViewService} from './view/view.service';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     
   ],
-  providers: [],
+  providers: [ViewService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
